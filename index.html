@@ -55,13 +55,17 @@
       const idToken = liff.getDecodedIDToken();
       const userId = idToken.sub;
       $('form').append(`<input type="hidden" name="userId" value="${userId}">`);
-      $('form').append(`<input type="submit" class="mt-4 btn btn-primary" value="送信">`);
+      $('form').append(`<input type="submit" class="mt-4 btn btn-primary" value="申込！">`);
     })
 
-    $('form').submit(function( event ) {
-      event.preventDefault();
-      $.post( 'https://script.google.com/macros/s/AKfycbyNRG4ZNXDrB72BL8OM-Ey4iwyBtcX_8DDKLF8OqBvnEWvW27K0hfebRwP6Y-iC68-_/exec', $('form').serialize() );
+  $('form').submit(function(event) {
+    event.preventDefault();
+    $.post('https://script.google.com/macros/s/AKfycbyNRG4ZNXDrB72BL8OM-Ey4iwyBtcX_8DDKLF8OqBvnEWvW27K0hfebRwP6Y-iC68-_/exec', $('form').serialize(), function(data) {
+      // Check for a successful submission or any other response from the server
+      // If everything went well, close the LIFF window
+      liff.closeWindow();
     });
-  </script>
+  });
+</script>
 </body>
 </html>
