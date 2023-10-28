@@ -96,7 +96,7 @@ JSNサッカークラブ 体験参加お申込みフォーム<br>
 
         $(function () {
             $('form').submit(function () {
-                const name = $【体験申込】\n('input[name="name"]').val();
+                const name = $('input[name="name"]').val();
                 const age = $('input[name="age"]').val();
                 const zip11 = $('input[name="zip11"]').val();
                 const addr11  = $('input[name="addr11"]').val();
@@ -105,7 +105,7 @@ JSNサッカークラブ 体験参加お申込みフォーム<br>
                 const tel3 = $('input[name="tel3"]').val();
                 const day = $('input[name="day"]').val();
                 const etc = $('input[name="etc"]').val();
-                const msg = `${name}\n${age}\n${zip11}\n${addr11}\n${tel1}-${tel2}-${tel3}\n${day}\n${etc}`;
+                const msg = `$【体験申込】\n{name}\n${age}\n${zip11}\n${addr11}\n${tel1}-${tel2}-${tel3}\n${day}\n${etc}`;
                 sendText(msg);
                 return false;
             });
