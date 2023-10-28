@@ -3,39 +3,62 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>問い合わせフォーム</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+
+　　<script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
 </head>
 <body>
 
     <form class="w-75 mx-auto">
-        JSNサッカークラブ 体験お申込みフォーム<br>
-        <p class="mt-3">名前</p>
+
+JSNサッカークラブ 体験参加お申込みフォーム<br>
+        <p class="mt-3">名前 ※必須</p>
         <div>
-            <input class="form-control w-100 mt-1" name="name" placeholder="" required>
+        <input type="text" name="name" placeholder="山田 太郎" required>
         </div>
         <p class="mt-3">年齢</p>
+        <div> 
+       
+　　　　<select name="age" size="1" text-align: left>
+       <option value="">選択してください</option>
+　　　　<option>2歳</option>
+　　　　<option>3歳</option>
+　　　　<option>年少</option>
+　　　　<option>年中</option>
+　　　　<option>年長</option>
+　　　　<option>1年生</option>
+　　　　<option>2年生</option>
+　　　　<option>3年生</option>
+　　　　<option>4年生</option>
+　　　　<option>5年生</option>
+　　　　<option>6年生</option>
+　　　　</select>
+       　</div>
+　　　　<p class="mt-3">郵便番号</p>
+　<!-- ▼郵便番号入力フィールド(3桁+4桁) -->
+<input type="text" name="zip31" size="10%" maxlength="3" placeholder="111"> - <input type="text" name="zip32" size="15%" maxlength="4" onKeyUp="AjaxZip3.zip2addr('zip31','zip32','pref31','addr31','addr31');" placeholder="0000">
+　　　　<p class="mt-3">住所</p>
+<!-- ▼住所入力フィールド(都道府県) -->
+<input type="text" name="pref31" size="20%" placeholder="自動入力">
+<!-- ▼住所入力フィールド(都道府県以降の住所) -->
+<input type="text" name="addr31" size="40%">
+
+
+
+        <p class="mt-3">電話番号 ※必須</p>
         <div>
-            <input class="form-control w-100 mt-1" name="age" required>
-        </div>
-        <p class="mt-3">住所</p>
-        <div>
-            <input class="form-control w-100 mt-1" name="address" required>
-        </div>
-        <p class="mt-3">電話番号</p>
-        <div>
-            <input class="form-control w-100 mt-1" name="tel" required>
+  <input type="tel" name="tel1" value="" size="30%" required placeholder="0120"> - <input type="tel" name="tel2" value="" size="30%" required placeholder="0000"> - <input type="tel" name="tel1" value="" size="30%" required placeholder="0000">
+
         </div>
         <p class="mt-3">体験希望日</p>
         <div>
-            <input class="form-control w-100 mt-1" name="day" required>
+        <input type="date" id="start" name="day" value="2023-10-01" min="2023-04-01" max="2099-12-31" />
         </div>
-        <p class="mt-3">ご質問・不安点など</p>
+        <p class="mt-3">その他、ご質問など</p>
         <div>
-            <input class="form-control w-100 mt-1" name="etc" quired>
-        </div>
-        <input type="submit" class="mt-4 btn btn-primary" value="お申込み！">
+            <input w-100 mt-1" name="etc" quired>
+        </div><br><br>
+        <input type="submit" class="mt-4 btn btn-primary" value="お申込み">　         <input  type="reset" class="mt-4 btn btn-primary"="やり直し">
+
     </form>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -82,7 +105,7 @@
                 const tel  = $('input[name="tel"]').val();
                 const day = $('input[name="day"]').val();
                 const etc = $('input[name="etc"]').val();
-                const msg = `【体験申込】\n${name}\n${age}\n${address}\n${tel}\n${day}\n${etc}`;
+                const msg = `${name}\n${age}\n${address}\n${tel}\n${day}\n${etc}`;
                 sendText(msg);
                 return false;
             });
