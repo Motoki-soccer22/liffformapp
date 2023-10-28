@@ -50,7 +50,56 @@ JSNサッカークラブ 体験参加お申込みフォーム<br>
         <!-- ▼体験希望日 -->
         <p class="mt-3">体験希望日</p>
         <div>
-            <input type="date" id="start" name="day" value="2023-11-01" min="2023-11-01" max="2099-12-31" />
+            <!-- ▼体験日 選択 -->
+            <select type="day1" name="day1" size="1" text-align: left>
+                <option value="">選択してください</option>
+                <option>01月</option>
+                <option>02月</option>
+                <option>03月</option>
+                <option>04月</option>
+                <option>05月</option>
+                <option>06月</option>
+                <option>07月</option>
+                <option>08月</option>
+                <option>09月</option>
+                <option>10月</option>
+                <option>11月</option>
+                <option>12月</option>            
+                
+                <select type="day2" name="day2" size="1" text-align: left>
+                <option value=""></option>
+                <option>01日</option>
+                <option>02日</option>
+                <option>03日</option>
+                <option>04日</option>
+                <option>05日</option>
+                <option>06日</option>
+                <option>07日</option>
+                <option>08日</option>
+                <option>09日</option>
+                <option>10日</option>
+                <option>11日</option>
+                <option>12日</option>
+                <option>13日</option>
+                <option>14日</option>
+                <option>15日</option>
+                <option>16日</option>
+                <option>17日</option>
+                <option>18日</option>
+                <option>19日</option>
+                <option>20日</option>
+                <option>21日</option>
+                <option>22日</option>
+                <option>23日</option>
+                <option>24日</option>
+                <option>25日</option>
+                <option>26日</option>
+                <option>27日</option>
+                <option>28日</option>
+                <option>29日</option>
+                <option>30日</option>
+                <option>31日</option>
+        </div>
         </div>
         <!-- ▼備考 -->
         <p class="mt-3">その他、ご質問など</p>
@@ -106,9 +155,10 @@ JSNサッカークラブ 体験参加お申込みフォーム<br>
                 const tel1 = $('input[name="tel1"]').val();
                 const tel2 = $('input[name="tel2"]').val();
                 const tel3 = $('input[name="tel3"]').val();
-                const day = $('input[name="day"]').val();
+                const day1 = $('select[name="day1"]').val();
+                const day2 = $('select[name="day2"]').val();
                 const etc = $('input[name="etc"]').val();
-                const msg = `【体験申込】\n${name}\n${age}\n${zip11}\n${addr11}\n${tel1}-${tel2}-${tel3}\n${day}\n${etc}`;
+                const msg = `【体験申込】\n${name}\n${age}\n${zip11}\n${addr11}\n${tel1}-${tel2}-${tel3}\n${day1}${day2}\n${etc}`;
                 sendText(msg);
                 return false;
             });
