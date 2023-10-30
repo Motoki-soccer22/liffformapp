@@ -162,7 +162,7 @@ JSNサッカークラブ 体験参加お申込みフォーム<br>
                 const day1 = $('select[name="day1"]').val();
                 const day2 = $('select[name="day2"]').val();
                 const etc = $('input[name="etc"]').val();
-                const msg = `【体験申込】\n${name}\n${age}\n${zip11}\n${addr11}\n${tel1}-${tel2}-${tel3}\n${day1}月${day2}日\n${etc}`;
+                const msg = `【体験申込】\n${name}\n${age}\n${zip11}\n${addr11}\n${tel1}-${tel2}-${tel3}\n${day1}月${day2}日.\n${etc}`;
                 sendText(msg);
                 return false;
             });
