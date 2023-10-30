@@ -208,8 +208,8 @@
 <input type="tel1" name=tel1 class="Form-Item-Input1" placeholder="000" required> - <input type="tel2" name=tel2 class="Form-Item-Input1" placeholder="0000" required> - <input type="tel3" name=tel3 class="Form-Item-Input1" placeholder="0000" required>
     </div> 
     <div class="Form-Item">
-      <p class="Form-Item-Label"><span class="Form-Item-Label-quired">任意</span>住所</p>
-      <input type="address" name=address class="Form-Item-Input" placeholder="東京都新宿区新宿1-1">
+      <p class="Form-Item-Label"><span class="Form-Item-Label-quired">必須</span>住所</p>
+      <input type="address" name=address class="Form-Item-Input" placeholder="東京都新宿区新宿1-1" required>
     </div>
     <div class="Form-Item">
       <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>体験希望日</p>
@@ -217,7 +217,7 @@
     </div>
     <div class="Form-Item">
       <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-quired">任意</span>ご質問・不安な点など</p>
-      <input type="etc" name=etc textarea class="Form-Item-Textarea" required></textarea>
+        <input type="etc" name=etc class="Form-Item-Input" placeholder="">
     </div>
     <!-- 送信ボタン -->
     <input type="submit" class="mt-7 btn btn-primary" value="お申込み">
