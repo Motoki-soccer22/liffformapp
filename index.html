@@ -55,53 +55,53 @@ JSNサッカークラブ 体験参加お申込みフォーム<br>
             <!-- ▼体験日 選択 -->
             <select type="day1" name="day1" size="1" text-align: left>
                 <option value="">〇月</option>
-                <option>01月</option>
-                <option>02月</option>
-                <option>03月</option>
-                <option>04月</option>
-                <option>05月</option>
-                <option>06月</option>
-                <option>07月</option>
-                <option>08月</option>
-                <option>09月</option>
-                <option>10月</option>
-                <option>11月</option>
-                <option>12月</option>       
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+                <option>04</option>
+                <option>05</option>
+                <option>06</option>
+                <option>07</option>
+                <option>08</option>
+                <option>09</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>       
             </select>        
                 
                 <select type="day2" name="day2" size="1" text-align: left>
                 <option value="">〇日</option>
-                <option>01日</option>
-                <option>02日</option>
-                <option>03日</option>
-                <option>04日</option>
-                <option>05日</option>
-                <option>06日</option>
-                <option>07日</option>
-                <option>08日</option>
-                <option>09日</option>
-                <option>10日</option>
-                <option>11日</option>
-                <option>12日</option>
-                <option>13日</option>
-                <option>14日</option>
-                <option>15日</option>
-                <option>16日</option>
-                <option>17日</option>
-                <option>18日</option>
-                <option>19日</option>
-                <option>20日</option>
-                <option>21日</option>
-                <option>22日</option>
-                <option>23日</option>
-                <option>24日</option>
-                <option>25日</option>
-                <option>26日</option>
-                <option>27日</option>
-                <option>28日</option>
-                <option>29日</option>
-                <option>30日</option>
-                <option>31日</option>   
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+                <option>04</option>
+                <option>05</option>
+                <option>06</option>
+                <option>07</option>
+                <option>08</option>
+                <option>09</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+                <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
+                <option>19</option>
+                <option>20</option>
+                <option>21</option>
+                <option>22</option>
+                <option>23</option>
+                <option>24</option>
+                <option>25</option>
+                <option>26</option>
+                <option>27</option>
+                <option>28</option>
+                <option>29</option>
+                <option>30</option>
+                <option>31</option>   
                 </select>
         </div>
         </div>
@@ -162,7 +162,7 @@ JSNサッカークラブ 体験参加お申込みフォーム<br>
                 const day1 = $('select[name="day1"]').val();
                 const day2 = $('select[name="day2"]').val();
                 const etc = $('input[name="etc"]').val();
-                const msg = `【体験申込】\n${name}\n${age}\n${zip11}\n${addr11}\n${tel1}-${tel2}-${tel3}\n${day1}${day2}\n${etc}`;
+                const msg = `【体験申込】\n${name}\n${age}\n${zip11}\n${addr11}\n${tel1}-${tel2}-${tel3}\n${day1}月${day2}日\n${etc}`;
                 sendText(msg);
                 return false;
             });
