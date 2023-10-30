@@ -54,6 +54,21 @@
     font-size: 15px;
   }
 }
+.Form-Item-Label1 {
+  width: 30%;
+  max-width: 248px;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+  font-size: 18px;
+}
+@media screen and (max-width: 480px) {
+  .Form-Item-Label1 {
+    max-width: inherit;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+  }
+}
 .Form-Item-Label.isMsg {
   margin-top: 8px;
   margin-bottom: auto;
@@ -74,6 +89,15 @@
   background: #5bc8ac;
   color: #fff;
   font-size: 14px;
+}[
+            @media screen and (max-width: 480px) {
+    .Form-Item-Label-Required {
+    border-radius: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    width: 32px;
+    font-size: 10px;
+  }
 }
 .Form-Item-Label-quired {
   border-radius: 6px;
@@ -87,9 +111,8 @@
   color: #fff;
   font-size: 14px;
 }
-
-@media screen and (max-width: 480px) {
-  .Form-Item-Label-Required {
+            @media screen and (max-width: 480px) {
+  .Form-Item-Label-quired {
     border-radius: 4px;
     padding-top: 4px;
     padding-bottom: 4px;
@@ -204,7 +227,7 @@ JSNサッカークラブ体験お申込みフォーム
     <input type="age" class="Form-Item-Input" placeholder="2歳">
   </div>
   <div class="Form-Item">
-    <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>電話番号</p>
+    <p class="Form-Item-Label1"><span class="Form-Item-Label-Required">必須</span>電話番号</p>
     <input type="tel1" class="Form-Item-Input1" placeholder="000"> - <input type="tel2" class="Form-Item-Input1" placeholder="0000"> - <input type="tel3" class="Form-Item-Input1" placeholder="0000">
   </div> 
    <div class="Form-Item">
