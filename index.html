@@ -18,6 +18,23 @@
             img {
                 width: 100%;
             }
+            .bg_test {
+                height: 250px;                  /* 高さ指定 */
+                padding:  20px;                 /* 余白指定 */
+                font-size: 20px;                /* 文字サイズ指定 */
+                background-color: powderblue;   /* 背景色指定 */
+            }
+            .bg_test2 {
+                color:  #fff;                   /* 文字色指定 */
+                height: 200px;                  /* 高さ指定 */
+                width:  200px;                  /* 幅指定 */
+                font-size:  14px;               /* 文字サイズ指定 */
+                background-color: blue;         /* 背景色指定 */
+                padding:  20px;                 /* 余白指定 */
+                float:  right;                  /* 位置指定 */
+                position:  relative;            /* 位置指定 */
+                top: 110px;                     /* 位置指定 */
+            }
             
             @media screen and (min-width: 481px) {
                 ul {
@@ -38,7 +55,12 @@
             }
         </style>
     </script>
-    
+        <div class="bg_test">
+            背景色を指定します
+            <div class="bg_test2">
+                子要素にも別で指定できます
+            </div>
+</div>
     </head>
     <body>
 
@@ -48,7 +70,7 @@ JSNサッカークラブ 体験参加お申込みフォーム<br>
         <!-- ▼名前 -->
         <p class="mt-1">名前 ※必須</p>
         <div>
-            <input name="name" placeholder="山田 太郎" required>
+            <input name="name" size="30%" placeholder="山田 太郎" required>
         </div>
         <p class="mt-2">年齢</p>
         <div> 
@@ -74,12 +96,12 @@ JSNサッカークラブ 体験参加お申込みフォーム<br>
         <input type="text" name="zip11" size="30%" maxlength="8" onKeyUp="AjaxZip3.zip2addr(this,'','addr11','addr11');" placeholder="111-0000">
 
         <!-- ▼住所入力フィールド(都道府県+以降の住所) -->
-        <input type="text" name="addr11" size="100%"placeholder="東京都新宿区新宿1-1" >
+        <input type="text" name="addr11" size="80%" placeholder="東京都新宿区新宿1-1" >
 
         <!-- ▼名前 -->
         <p class="mt-4">電話番号 ※必須</p>
         <div>
-            <input type="tel" name="tel1" value="" size="10%" required placeholder="0120"> - <input type="tel" name="tel2" value="" size="10%" required placeholder="0000"> - <input type="tel" name="tel3" value="" size="10%" required placeholder="0000"></div>
+            <input type="tel" name="tel1" value="" size="20%" required placeholder="0120"> - <input type="tel" name="tel2" value="" size="20%" required placeholder="0000"> - <input type="tel" name="tel3" value="" size="20%" required placeholder="0000"></div>
     
         <!-- ▼体験希望日 -->
         <p class="mt-5">体験希望日</p>
