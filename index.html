@@ -1,240 +1,37 @@
 <html>
-    
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>問い合わせフォーム</title>
-        
-        <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>体験会受付フォーム</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+</head>
+<body>
 
-   <style>.Form {
-  margin-top: 80px;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 720px;
-}
-@media screen and (max-width: 480px) {
-  .Form {
-    margin-top: 40px;
-  }
-}
-.Form-Item {
-  border-top: 1px solid #ddd;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-@media screen and (max-width: 480px) {
-  .Form-Item {
-    padding-left: 14px;
-    padding-right: 14px;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    flex-wrap: wrap;
-  }
-}
-.Form-Item:nth-child(5) {
-  border-bottom: 1px solid #ddd;
-}
-.Form-Item-Label {
-  width: 100%;
-  max-width: 248px;
-  letter-spacing: 0.05em;
-  font-weight: bold;
-  font-size: 18px;
-}
-@media screen and (max-width: 480px) {
-  .Form-Item-Label {
-    max-width: inherit;
-    display: flex;
-    align-items: center;
-    font-size: 15px;
-  }
-}
-.Form-Item-Label.isMsg {
-  margin-top: 8px;
-  margin-bottom: auto;
-}
-@media screen and (max-width: 480px) {
-  .Form-Item-Label.isMsg {
-    margin-top: 0;
-  }
-}
-.Form-Item-Label-Required {
-  border-radius: 6px;
-  margin-right: 8px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  width: 48px;
-  display: inline-block;
-  text-align: center;
-  background: #ff0000;
-  color: #fff;
-  font-size: 14px;
-}
-    
-@media screen and (max-width: 480px) {
-  .Form-Item-Label-Required {
-    border-radius: 4px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    width: 48px;
-    font-size: 10px;
-  }
-}
-    
-.Form-Item-Label-quired {
-  border-radius: 6px;
-  margin-right: 8px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  width: 48px;
-  display: inline-block;
-  text-align: center;
-  background: #5bc8ac;
-  color: #fff;
-  font-size: 14px;
-}
-
-@media screen and (max-width: 480px) {
-  .Form-Item-Label-quired {
-    border-radius: 4px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    width: 48px;
-    font-size: 10px;
-  }
-}
-.Form-Item-Input {
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  margin-left: 40px;
-  padding-left: 1em;
-  padding-right: 1em;
-  height: 48px;
-  flex: 1;
-  width: 100%;
-  max-width: 410px;
-  background: #eaedf2;
-  font-size: 18px;
-}
-@media screen and (max-width: 480px) {
-  .Form-Item-Input {
-    margin-left: 0;
-    margin-top: 18px;
-    height: 40px;
-    flex: inherit;
-    font-size: 15px;
-  }
-}
-.Form-Item-Input1 {
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  margin-left: 40px;
-  padding-left: 1em;
-  padding-right: 1em;
-  height: 48px;
-  flex: 1;
-  width: 30%;
-  max-width: 410px;
-  background: #eaedf2;
-  font-size: 18px;
-}
-@media screen and (max-width: 480px) {
-  .Form-Item-Input1 {
-    margin-left: 0;
-    margin-top: 18px;
-    height: 40px;
-    flex: inherit;
-    font-size: 15px;
-  }
-}
-.Form-Item-Textarea {
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  margin-left: 40px;
-  padding-left: 1em;
-  padding-right: 1em;
-  height: 216px;
-  flex: 1;
-  width: 100%;
-  max-width: 410px;
-  background: #eaedf2;
-  font-size: 18px;
-}
-@media screen and (max-width: 480px) {
-  .Form-Item-Textarea {
-    margin-top: 18px;
-    margin-left: 0;
-    height: 200px;
-    flex: inherit;
-    font-size: 15px;
-  }
-}
-.Form-Btn {
-  border-radius: 6px;
-  margin-top: 32px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  width: 280px;
-  display: block;
-  letter-spacing: 0.05em;
-  background: #5bc8ac;
-  color: #fff;
-  font-weight: bold;
-  font-size: 20px;
-}
-@media screen and (max-width: 480px) {
-  .Form-Btn {
-    margin-top: 24px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    width: 160px;
-    font-size: 16px;
-  }
-}
-
-</style>
-
-
-<div class="Form">
-  JSNサッカークラブ体験お申込みフォーム
-  <form>
-    <div class="Form-Item">
-      <p class="Form-Item-Label">
-        <span class="Form-Item-Label-Required">必須</span>お子様のお名前</p>
-      <input type="name" name=name class="Form-Item-Input" placeholder="山田 太郎" required>
-    </div>
-    <div class="Form-Item">
-      <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>年齢</p>
-      <input type="age" name=age class="Form-Item-Input" placeholder="2歳" required>
-    </div>
-    <div class="Form-Item">
-      <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>電話番号</p>
-        <input type="tel1" name=tel1 class="Form-Item-Input1" placeholder="000" required> - <input type="tel2" name=tel2 class="Form-Item-Input1" placeholder="0000" required> - <input type="tel3" name=tel3 class="Form-Item-Input1" placeholder="0000" required>
-    </div> 
-    <div class="Form-Item">
-      <p class="Form-Item-Label"><span class="Form-Item-Label-quired">必須</span>住所</p>
-      <input type="address" name=address class="Form-Item-Input" placeholder="東京都新宿区新宿1-1" required>
-    </div>
-    <div class="Form-Item">
-      <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>体験希望日</p>
-      <input type="day" name=day class="Form-Item-Input" placeholder="〇月〇日" required>
-    </div>
-    <div class="Form-Item">
-      <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-quired">任意</span>ご質問・不安な点など</p>
-        <input type="etc" name=etc class="Form-Item-Input" placeholder="">
-    </div>
-    <!-- 送信ボタン -->
-    <input type="submit" class="mt-7 btn btn-primary" value="お申込み">
-    <input type="reset" class="mt-8 btn btn-primary" value="やり直し">
-  </form>
-</div>
+    <form class="w-75 mx-auto">
+        <p class="mt-3">体験者名</p>
+        <div>
+            <input class="form-control w-100 mt-1" name="name" placeholder="" required>
+        </div>
+        <p class="mt-3">学校名</p>
+        <div>
+            <input class="form-control w-100 mt-1" name="udetate" required>
+        </div>
+        <p class="mt-3">保護者名</p>
+        <div>
+            <input class="form-control w-100 mt-1" name="fukkin" required>
+        </div>
+        <p class="mt-3">お住まいの都道府県</p>
+        <div>
+            <input class="form-control w-100 mt-1" name="haikin" required>
+        </div>
+        <p class="mt-3">体験会の地域</p>
+        <div>
+            <input class="form-control w-100 mt-1" name="sukuwat" required>
+        </div>
+        <input type="submit" class="mt-4 btn btn-primary" value="送信">
+    </form>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
@@ -244,7 +41,7 @@
     <script>
 
         $(document).ready(function () {
-            const liffId = "2001334035-Vy0MQom8";
+            const liffId = "**********-********";
             initializeLiff(liffId);
         })
 
@@ -274,20 +71,18 @@
 
         $(function () {
             $('form').submit(function () {
-                const name = $('input[name="name"]').val();
-                const age = $('input[name="age"]').val();
-                const address  = $('input[name="address"]').val();
-                const tel1 = $('input[name="tel1"]').val();
-                const tel2 = $('input[name="tel2"]').val();
-                const tel3 = $('input[name="tel3"]').val();
-                const day = $('input[name="day"]').val();
-                const etc = $('input[name="etc"]').val();
-                const msg = `【体験申込】\n${name}\n${age}\n${address}\n${tel1}-${tel2}-${tel3}\n${day}.\n${etc}`;
+                const name    = $('input[name="name"]').val();
+                const udetate = $('input[name="udetate"]').val();
+                const fukkin  = $('input[name="fukkin"]').val();
+                const haikin  = $('input[name="haikin"]').val();
+                const sukuwat = $('input[name="sukuwat"]').val();
+                const msg = `${name}\n${udetate}\n${fukkin}\n${haikin}\n${sukuwat}`;
                 sendText(msg);
                 return false;
             });
-        })
-    </script>
-    </body>
+        });
 
+    </script>
+
+</body>
 </html>
