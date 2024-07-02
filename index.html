@@ -12,23 +12,27 @@
     <form class="w-75 mx-auto">
         <p class="mt-3">体験者名</p>
         <div>
-            <input class="form-control w-100 mt-1" name="name" placeholder="" required>
+            <input class="form-control w-100 mt-1" name="kodomo" placeholder="" required>
         </div>
         <p class="mt-3">学校名</p>
         <div>
-            <input class="form-control w-100 mt-1" name="udetate" required>
+            <input class="form-control w-100 mt-1" name="gakkou" required>
+        </div>
+        <p class="mt-3">学年</p>
+        <div>
+            <input class="form-control w-100 mt-1" name="gakunen" required>
         </div>
         <p class="mt-3">保護者名</p>
         <div>
-            <input class="form-control w-100 mt-1" name="fukkin" required>
+            <input class="form-control w-100 mt-1" name="hogosya" required>
         </div>
         <p class="mt-3">お住まいの都道府県</p>
         <div>
-            <input class="form-control w-100 mt-1" name="haikin" required>
+            <input class="form-control w-100 mt-1" name="todouhuken" required>
         </div>
         <p class="mt-3">体験会の地域</p>
         <div>
-            <input class="form-control w-100 mt-1" name="sukuwat" required>
+            <input class="form-control w-100 mt-1" name="chiiki" required>
         </div>
         <input type="submit" class="mt-4 btn btn-primary" value="送信">
     </form>
@@ -76,7 +80,7 @@
                 const fukkin  = $('input[name="fukkin"]').val();
                 const haikin  = $('input[name="haikin"]').val();
                 const sukuwat = $('input[name="sukuwat"]').val();
-                const msg = `$【体験受付フォーム】\n体験者名${name}\n${udetate}\n${fukkin}\n${haikin}\n${sukuwat}`;
+                const msg = `$【体験受付フォーム】\n体験者名：${kodomo}\n学校名：${gakkou}\n学年：${gakunen}\n保護者名：${hogosya}\n都道府県：${todouhuken}\n地域：${chiiki}`;
                 sendText(msg);
                 return false;
             });
