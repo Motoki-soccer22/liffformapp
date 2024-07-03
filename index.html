@@ -75,11 +75,12 @@
 
         $(function () {
             $('form').submit(function () {
-                const name    = $('input[name="name"]').val();
-                const udetate = $('input[name="udetate"]').val();
-                const fukkin  = $('input[name="fukkin"]').val();
-                const haikin  = $('input[name="haikin"]').val();
-                const sukuwat = $('input[name="sukuwat"]').val();
+                const kodomo    = $('input[name="kodomo"]').val();
+                const gakkou = $('input[name="gakkou"]').val();
+                const gakunen  = $('input[name="gakunen"]').val();
+                const hogosya  = $('input[name="hogosya"]').val();
+                const todouhuken = $('input[name="todouhuken"]').val();
+                const chiiki = $('input[name="chiiki"]').val();
                 const msg = `$【体験受付フォーム】\n体験者名：${kodomo}\n学校名：${gakkou}\n学年：${gakunen}\n保護者名：${hogosya}\n都道府県：${todouhuken}\n地域：${chiiki}`;
                 sendText(msg);
                 return false;
