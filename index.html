@@ -86,7 +86,7 @@
                 const hogosya  = $('input[name="hogosya"]').val();
                 const todouhuken = $('select[name="todouhuken"]').val();
                 const chiiki = $('input[name="chiiki"]').val();
-                const msg = `$【体験受付フォーム】\n体験者名：${kodomo}\n学校名：${gakkou}\n学年：${gakunen}\n保護者名：${hogosya}\n都道府県：${todouhuken}\n地域：${chiiki}`;
+                const msg = `【体験受付フォーム】\n体験者名：${kodomo}\n学校名：${gakkou}\n学年：${gakunen}\n保護者名：${hogosya}\n都道府県：${todouhuken}\n地域：${chiiki}`;
                 sendText(msg);
                 return false;
             });
